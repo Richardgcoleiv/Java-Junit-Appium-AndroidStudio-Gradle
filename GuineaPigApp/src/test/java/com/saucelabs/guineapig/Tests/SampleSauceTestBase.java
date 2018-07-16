@@ -153,7 +153,7 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
         seleniumURI = SauceHelpers.buildSauceUri();
         //If available add build tag. When running under Jenkins BUILD_TAG is automatically set.
         //You can set this manually on manual runs.
-        app = BuildConfig.APP_PATH;
+        app = "/Users/rcole/Downloads/applause-app.apk";
         if (app != null){
             app = SauceHelpers.uploadAppToSauceStorage(app, username, accessKey);
         } else {

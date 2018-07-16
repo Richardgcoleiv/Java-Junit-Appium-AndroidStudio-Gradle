@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.saucelabs.guineapig"
@@ -10,6 +9,11 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
     }
     buildTypes {
         release {
@@ -44,6 +48,7 @@ android {
 
 
 def getApkPath(String type) {
+    return "~/Downloads/Applause QA App_1.3.27 QA.apk"
     if (type.toLowerCase().contentEquals("debug")) {
 
         return getBuildDir().getAbsolutePath() +
